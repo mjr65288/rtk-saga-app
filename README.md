@@ -1,2 +1,2 @@
 # rtk-saga-app
-React RTK Redux  Saga project with Typescript
+Simple React App that uses Redux Toolkit with Redux Saga
