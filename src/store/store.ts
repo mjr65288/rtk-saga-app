@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
 import createSagaMiddleware from 'redux-saga';
 
-import { rootSaga as counterRootSaga} from '../sagas/counter-saga';
-import rootReducer from '../slices/rootReducer';
+import rootSaga from '../sagas';
+import rootReducer from '../slices';
+
 
 // Initialize the Saga middleware
 const sagaMiddleware = createSagaMiddleware();
@@ -21,7 +22,7 @@ const store = configureStore({
 });
 
 // Run the sagas
-sagaMiddleware.run(counterRootSaga);
+sagaMiddleware.run(rootSaga);
 
 // Define types for RootState and AppDispatch for usage throughout the app
 export type RootState = ReturnType<typeof store.getState>;

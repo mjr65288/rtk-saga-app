@@ -1,5 +1,5 @@
 import { takeEvery, put, delay } from 'redux-saga/effects';
-import { increment } from '../../slices/counterSlice';
+import { increment } from '../../slices/counter-slice/counterSlice';
 
 /**
  * Handle increment asynchronously by delaying it.
